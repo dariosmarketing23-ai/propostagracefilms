@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grace Films | Marketing & Posicionamento Audiovisual</title>
-    <meta name="description" content="A Grace Vision (agora Grace Films) é uma agência especializada em posicionamento audiovisual estratégico para profissionais e empresas.">
+    <meta name="description" content="A Grace Films é uma agência especializada em posicionamento audiovisual estratégico para profissionais e empresas.">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Meta Pixel Code Placeholder -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    /* TODO: SUBSTITUA 'SEU_PIXEL_ID_AQUI' PELO CÓDIGO DO SEU PIXEL (EX: 1234567890) */
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <div class="blob blob-1"></div>
@@ -31,16 +51,16 @@
 
     <header id="inicio" class="hero">
         <div class="hero-content fade-in-up">
-            <div class="badge">Grace Vision agora é Grace Films</div>
+            <div class="badge">Posicionamento Estratégico</div>
             <h1>Marketing & <span class="highlight">Posicionamento Audiovisual</span></h1>
             <p>Produção Audiovisual Estratégica + Tráfego Pago para profissionais e empresas que desejam se posicionar como autoridade no mercado.</p>
             <div class="hero-socials">
-                <a href="https://www.instagram.com/gracevisionbr/" target="_blank">@gracevisionbr</a> |
+                <a href="https://www.instagram.com/gracefilms.mov/" target="_blank">@gracefilms.mov</a> |
                 <a href="https://www.instagram.com/eudariodouglas/" target="_blank">@eudariodouglas</a>
             </div>
             <div class="hero-buttons" style="margin-top: 2rem;">
                 <a href="#pacotes" class="btn btn-primary">Pacotes de Serviços</a>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20consultor%20da%20Grace%20Films!" target="_blank" class="btn btn-secondary">Falar com Consultor</a>
+                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20consultor%20da%20Grace%20Films!" target="_blank" class="btn btn-secondary" onclick="if(typeof fbq === 'function') fbq('track', 'Contact');">Falar com Consultor</a>
             </div>
         </div>
     </header>
@@ -49,7 +69,7 @@
         <div class="split-layout fade-in-up">
             <div class="split-text">
                 <h2 class="section-title">Quem Somos</h2>
-                <p>A Grace Vision é uma agência especializada em posicionamento audiovisual estratégico para profissionais e empresas que desejam se posicionar como autoridade no mercado.</p>
+                <p>A Grace Films é uma agência especializada em posicionamento audiovisual estratégico para profissionais e empresas que desejam se posicionar como autoridade no mercado.</p>
                 <p>Não fazemos “vídeos bonitos”. Criamos conteúdos que posicionam, convertem e constroem autoridade. Cada peça audiovisual é pensada estrategicamente para gerar resultados reais no seu negócio.</p>
             </div>
             <div class="split-img-placeholder">
@@ -162,7 +182,7 @@
                     <li><i class="icon-check"></i> 1 Campanha Meta Ads</li>
                     <li><i class="icon-check"></i> Equipamento nível Cinema</li>
                 </ul>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20assinar%20o%20pacote%20Start%20da%20Grace%20Films!" target="_blank" class="btn btn-card">Assinar Start</a>
+                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20assinar%20o%20pacote%20Start%20da%20Grace%20Films!" target="_blank" class="btn btn-card" onclick="if(typeof fbq === 'function') fbq('track', 'Lead', {content_name: 'Start'});">Assinar Start</a>
             </div>
 
             <!-- Destaque (IDEAL) -->
@@ -180,7 +200,7 @@
                     <li><i class="icon-check"></i> 2 Campanhas + Otimização</li>
                     <li><i class="icon-check"></i> Google Meu Negócio</li>
                 </ul>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20assinar%20o%20pacote%20Ideal%20da%20Grace%20Films!" target="_blank" class="btn btn-primary btn-card">Assinar Ideal</a>
+                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20assinar%20o%20pacote%20Ideal%20da%20Grace%20Films!" target="_blank" class="btn btn-primary btn-card" onclick="if(typeof fbq === 'function') fbq('track', 'Lead', {content_name: 'Ideal'});">Assinar Ideal</a>
             </div>
 
             <!-- Premium (PRO) -->
@@ -198,7 +218,7 @@
                     <li><i class="icon-check"></i> Funil de Conversão</li>
                     <li><i class="icon-check"></i> Criação de Site Institucional</li>
                 </ul>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20assinar%20o%20pacote%20Pro%20da%20Grace%20Films!" target="_blank" class="btn btn-card">Assinar Pro</a>
+                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20assinar%20o%20pacote%20Pro%20da%20Grace%20Films!" target="_blank" class="btn btn-card" onclick="if(typeof fbq === 'function') fbq('track', 'Lead', {content_name: 'Pro'});">Assinar Pro</a>
             </div>
         </div>
     </section>
@@ -293,7 +313,7 @@
                 </ol>
                 <div style="margin-top: 3rem;">
                     <p style="margin-bottom:1rem; font-weight:600;">Vamos conversar?</p>
-                    <a href="https://wa.me/5586995065135" target="_blank" class="btn btn-primary" style="width: 100%;">Falar com Dário Douglas</a>
+                    <a href="https://wa.me/5586995065135" target="_blank" class="btn btn-primary" style="width: 100%;" onclick="if(typeof fbq === 'function') fbq('track', 'Contact');">Falar com Dário Douglas</a>
                 </div>
             </div>
         </div>
@@ -304,7 +324,7 @@
             <div class="footer-logo">Grace<span>Films</span></div>
             <p>Construindo o futuro audiovisual da sua marca.</p>
             <div class="socials">
-                <a href="https://www.instagram.com/gracevisionbr/" target="_blank">@gracevisionbr</a>
+                <a href="https://www.instagram.com/gracefilms.mov/" target="_blank">@gracefilms.mov</a>
                 <a href="https://www.instagram.com/eudariodouglas/" target="_blank">@eudariodouglas</a>
                 <a href="https://wa.me/5586995065135" target="_blank">WhatsApp</a>
             </div>
