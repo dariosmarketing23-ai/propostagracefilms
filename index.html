@@ -1,371 +1,316 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grace Films | Marketing & Posicionamento Audiovisual</title>
-    <meta name="description" content="A Grace Films é uma agência especializada em posicionamento audiovisual estratégico para profissionais e empresas.">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Meta Pixel Code Placeholder -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    
-    /* TODO: SUBSTITUA 'SEU_PIXEL_ID_AQUI' PELO CÓDIGO DO SEU PIXEL (EX: 1234567890) */
-    fbq('init', 'SEU_PIXEL_ID_AQUI');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grace Films — Produtora Audiovisual Estratégica | Teresina, PI</title>
+  <meta name="description" content="A Grace Films é uma produtora audiovisual estratégica de Teresina, PI. Audiovisual cinematográfico para marcas que entendem que imagem é estratégia.">
+  <meta name="keywords" content="produtora audiovisual, Teresina, vídeo institucional, cinema, estratégia audiovisual, Grace Films">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="LOGO.png">
+  <link rel="apple-touch-icon" href="LOGO.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Grace<span>Films</span></a>
-            <ul class="nav-links">
-                <li><a href="#quem-somos">Quem Somos</a></li>
-                <li><a href="#como-funciona">Metodologia</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#pacotes">Pacotes</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <a href="#pacotes" class="btn btn-outline">Ver Planos</a>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- GRAIN OVERLAY -->
+  <div class="grain-overlay"></div>
+
+  <!-- LOADING SCREEN -->
+  <div class="loading-screen" id="loading-screen">
+    <img src="LOGO.png" alt="Grace Films" class="loading-logo" id="loading-logo">
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="LOGO.png" alt="Grace Films" class="nav-logo-img">
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#metodo" class="nav-link">Método</a>
+        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <a href="https://wa.me/5586995065135?text=Olá%2C%20gostaria%20de%20agendar%20uma%20reunião%20com%20a%20Grace%20Films!" target="_blank" rel="noopener" class="nav-cta">Agendar Reunião</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="#sobre" class="mobile-link">Sobre</a>
+      <a href="#metodo" class="mobile-link">Método</a>
+      <a href="#portfolio" class="mobile-link">Portfólio</a>
+      <a href="#contato" class="mobile-link">Contato</a>
+      <a href="https://wa.me/5586995065135?text=Olá%2C%20gostaria%20de%20agendar%20uma%20reunião%20com%20a%20Grace%20Films!" target="_blank" rel="noopener" class="mobile-cta">Agendar Reunião</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <img src="LOGO.png" alt="Grace Films" class="hero-logo" id="hero-logo">
+      <p class="hero-subtitle reveal-text">PRODUTORA AUDIOVISUAL</p>
+      <h1 class="hero-headline reveal-text">
+        <em>Audiovisual estratégico para marcas que entendem que imagem não é vaidade — é estratégia.</em>
+      </h1>
+      <a href="https://wa.me/5586995065135?text=Olá%2C%20gostaria%20de%20agendar%20uma%20reunião%20com%20a%20Grace%20Films!" target="_blank" rel="noopener" class="hero-cta reveal-text">Agendar Reunião</a>
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-socials">
+        <a href="https://instagram.com/gracefilms.mov" target="_blank" rel="noopener">@gracefilms.mov</a>
+        <a href="https://instagram.com/eudariodouglas" target="_blank" rel="noopener">@eudariodouglas</a>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE 1 -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>CINEMA ✦ ESTRATÉGIA ✦ RESULTADO ✦ POSICIONAMENTO ✦ CINEMA ✦ ESTRATÉGIA ✦ RESULTADO ✦ POSICIONAMENTO ✦ CINEMA ✦ ESTRATÉGIA ✦ RESULTADO ✦ POSICIONAMENTO ✦ CINEMA ✦ ESTRATÉGIA ✦ RESULTADO ✦ POSICIONAMENTO ✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUEM SOMOS -->
+  <section class="section about" id="sobre">
+    <div class="section-inner about-grid">
+      <div class="about-text">
+        <span class="section-label reveal-text">QUEM SOMOS</span>
+        <h2 class="section-title reveal-text">Não fazemos vídeos bonitos.<br>Construímos posicionamento.</h2>
+        <p class="section-body reveal-text">A Grace Films é uma produtora audiovisual estratégica para profissionais e empresas que desejam se posicionar como autoridade no mercado. Cada peça audiovisual é pensada para gerar resultado real no seu negócio.</p>
+        <div class="stats">
+          <div class="stat reveal-text">
+            <span class="stat-title">Cinema</span>
+            <span class="stat-desc">Qualidade cinematográfica em cada frame</span>
+          </div>
+          <div class="stat reveal-text">
+            <span class="stat-title">Sony FX30</span>
+            <span class="stat-desc">Cinema Line profissional</span>
+          </div>
+          <div class="stat reveal-text">
+            <span class="stat-title">100%</span>
+            <span class="stat-desc">Foco em Conversão</span>
+          </div>
         </div>
-    </nav>
-
-    <header id="inicio" class="hero">
-        <div class="hero-content fade-in-up">
-            <div class="badge">Posicionamento Estratégico</div>
-            <h1>Marketing & <span class="highlight">Posicionamento Audiovisual</span></h1>
-            <p>Produção Audiovisual Estratégica + Tráfego Pago para profissionais e empresas que desejam se posicionar como autoridade no mercado.</p>
-            <div class="hero-socials">
-                <a href="https://www.instagram.com/gracefilms.mov/" target="_blank">@gracefilms.mov</a> |
-                <a href="https://www.instagram.com/eudariodouglas/" target="_blank">@eudariodouglas</a>
+      </div>
+      <div class="about-visual reveal-text">
+        <div class="backstage-video">
+          <div class="backstage-video-wrapper">
+            <video src="backstage.mp4" muted loop playsinline preload="metadata" id="backstage-video"></video>
+            <div class="backstage-play-overlay" id="backstage-play">
+              <div class="backstage-play-btn">
+                <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
+                  <path d="M24 14L0 28V0L24 14Z" fill="white"/>
+                </svg>
+              </div>
+              <span class="backstage-label">BACKSTAGE</span>
             </div>
-            <div class="hero-buttons" style="margin-top: 2rem;">
-                <a href="#pacotes" class="btn btn-primary">Pacotes de Serviços</a>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20consultor%20da%20Grace%20Films!" target="_blank" class="btn btn-secondary" onclick="if(typeof fbq === 'function') fbq('track', 'Contact');">Falar com Consultor</a>
-            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <section id="quem-somos" class="section-container">
-        <div class="split-layout fade-in-up">
-            <div class="split-text">
-                <h2 class="section-title">Quem Somos</h2>
-                <p>A Grace Films é uma agência especializada em posicionamento audiovisual estratégico para profissionais e empresas que desejam se posicionar como autoridade no mercado.</p>
-                <p>Não fazemos “vídeos bonitos”. Criamos conteúdos que posicionam, convertem e constroem autoridade. Cada peça audiovisual é pensada estrategicamente para gerar resultados reais no seu negócio.</p>
-            </div>
-            <div class="split-img-placeholder">
-                <div class="glass-panel">Estrutura de Cinema.<br>Foco em Conversão.</div>
-            </div>
+  <!-- O QUE FAZEMOS -->
+  <section class="section services" id="servicos">
+    <div class="section-inner">
+      <span class="section-label reveal-text">O QUE FAZEMOS</span>
+      <h2 class="section-title reveal-text">O que nos separa de<br>produtoras tradicionais.</h2>
+      <div class="services-grid">
+        <div class="service-card reveal-text">
+          <span class="service-number">01</span>
+          <h3 class="service-title">Produção Cinematográfica</h3>
+          <p class="service-desc">Captação com Sony FX30 Cinema Line, iluminação LED e áudio profissional.</p>
         </div>
-    </section>
-
-    <section id="diferencial" class="section-container bg-darker">
-        <div class="section-header fade-in-up">
-            <h2 class="section-title">Nosso Diferencial</h2>
-            <p>O que nos separa de produtoras tradicionais.</p>
+        <div class="service-card reveal-text">
+          <span class="service-number">02</span>
+          <h3 class="service-title">Roteiros Estratégicos</h3>
+          <p class="service-desc">Textos orientados a reter atenção, gerar autoridade e converter.</p>
         </div>
-        <div class="grid-features">
-            <div class="feature-box fade-in-up" data-delay="100">
-                <i class="icon-check-big"></i>
-                <h4>Equipamento Profissional</h4>
-                <p>Sony FX30 (cinema line), iluminação e áudio de alta captação.</p>
-            </div>
-            <div class="feature-box fade-in-up" data-delay="150">
-                <i class="icon-check-big"></i>
-                <h4>Teleprompter</h4>
-                <p>Disponível para gravações, garantindo fluidez e confiança (opcional).</p>
-            </div>
-            <div class="feature-box fade-in-up" data-delay="200">
-                <i class="icon-check-big"></i>
-                <h4>Estratégia Personalizada</h4>
-                <p>Conteúdo desenhado exclusivamente para o seu nicho e público.</p>
-            </div>
-            <div class="feature-box fade-in-up" data-delay="250">
-                <i class="icon-check-big"></i>
-                <h4>Roteiros de Conversão</h4>
-                <p>Textos profissionais orientados a reter atenção e gerar ação.</p>
-            </div>
-            <div class="feature-box fade-in-up" data-delay="300">
-                <i class="icon-check-big"></i>
-                <h4>Tráfego Pago Integrado</h4>
-                <p>Distribuição estratégica aliada à produção de conteúdo.</p>
-            </div>
-            <div class="feature-box fade-in-up" data-delay="350">
-                <i class="icon-check-big"></i>
-                <h4>Dados e Relatórios</h4>
-                <p>Avaliação mensal de resultados e otimização constante.</p>
-            </div>
+        <div class="service-card reveal-text">
+          <span class="service-number">03</span>
+          <h3 class="service-title">Conteúdo para Redes</h3>
+          <p class="service-desc">Reels, Shorts e vídeos longos pensados pro algoritmo e pro negócio.</p>
         </div>
-    </section>
-
-    <section id="como-funciona" class="section-container">
-        <div class="section-header fade-in-up">
-            <h2 class="section-title">Como Funciona</h2>
-            <p>Nossa metodologia em 5 passos para o sucesso da sua marca.</p>
+        <div class="service-card reveal-text">
+          <span class="service-number">04</span>
+          <h3 class="service-title">Tráfego Pago</h3>
+          <p class="service-desc">Distribuição via Meta Ads integrada à produção audiovisual.</p>
         </div>
-        <div class="timeline">
-            <div class="timeline-step fade-in-up" data-delay="100">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h4>Briefing Estratégico</h4>
-                    <p>Entendemos o seu negócio, o público-alvo e os objetivos de posicionamento.</p>
-                </div>
-            </div>
-            <div class="timeline-step fade-in-up" data-delay="200">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h4>Planejamento de Conteúdo</h4>
-                    <p>Criamos o calendário editorial mensal com temas, formatos e roteiros.</p>
-                </div>
-            </div>
-            <div class="timeline-step fade-in-up" data-delay="300">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h4>Produção Audiovisual</h4>
-                    <p>Gravação profissional com equipamento cinema line e edição estratégica.</p>
-                </div>
-            </div>
-            <div class="timeline-step fade-in-up" data-delay="400">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h4>Distribuição + Tráfego</h4>
-                    <p>Publicamos e impulsionamos os conteúdos para atingir o público certo.</p>
-                </div>
-            </div>
-            <div class="timeline-step fade-in-up" data-delay="500">
-                <div class="step-number">5</div>
-                <div class="step-content">
-                    <h4>Análise de Resultados</h4>
-                    <p>Relatórios com métricas e ajustes estratégicos mensais para otimizar o ROI.</p>
-                </div>
-            </div>
+        <div class="service-card reveal-text">
+          <span class="service-number">05</span>
+          <h3 class="service-title">Posicionamento de Marca</h3>
+          <p class="service-desc">Estratégia visual que transforma profissionais em autoridades.</p>
         </div>
-    </section>
-
-    <!-- Portfólio Section -->
-    <section id="portfolio" class="section-container">
-        <div class="section-header fade-in-up">
-            <h2 class="section-title">Nosso Portfólio</h2>
-            <p>Conheça a qualidade de cinema e a estética que entregamos para nossos clientes.</p>
+        <div class="service-card reveal-text">
+          <span class="service-number">06</span>
+          <h3 class="service-title">Análise de Resultados</h3>
+          <p class="service-desc">Métricas reais, relatórios e otimização constante.</p>
         </div>
-        <div class="portfolio-grid">
-            <!-- Video 1 -->
-            <div class="portfolio-item fade-in-up" data-delay="100">
-                <div class="video-placeholder">
-                    <iframe src="https://player.vimeo.com/video/1175845243?fl=ip&fe=ec" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-                </div>
-                <h4>Estratégia de Meta Ads</h4>
-                <p>Nicho: Advocacia</p>
-            </div>
-            <!-- Video 2 -->
-            <div class="portfolio-item fade-in-up" data-delay="200">
-                <div class="video-placeholder">
-                    <iframe src="https://player.vimeo.com/video/1175845272?fl=ip&fe=ec" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-                </div>
-                <h4>Estratégia de Posicionamento</h4>
-                <p>Nicho: Médico</p>
-            </div>
-            <!-- Video 3 -->
-            <div class="portfolio-item fade-in-up" data-delay="300">
-                <div class="video-placeholder">
-                    <iframe src="https://player.vimeo.com/video/1175845319?fl=ip&fe=ec" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-                </div>
-                <h4>Estratégia de Posicionamento</h4>
-                <p>Nicho: Médico</p>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE 2 (REVERSO) -->
+  <div class="marquee-section marquee-reverse">
+    <div class="marquee-track">
+      <div class="marquee-content marquee-content-reverse">
+        <span>AUDIOVISUAL ✦ AUTORIDADE ✦ CONVERSÃO ✦ PRODUÇÃO ✦ AUDIOVISUAL ✦ AUTORIDADE ✦ CONVERSÃO ✦ PRODUÇÃO ✦ AUDIOVISUAL ✦ AUTORIDADE ✦ CONVERSÃO ✦ PRODUÇÃO ✦ AUDIOVISUAL ✦ AUTORIDADE ✦ CONVERSÃO ✦ PRODUÇÃO ✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- METODOLOGIA -->
+  <section class="section methodology" id="metodo">
+    <div class="section-inner">
+      <span class="section-label reveal-text">METODOLOGIA</span>
+      <h2 class="section-title reveal-text">Como trabalhamos.</h2>
+      <div class="method-steps">
+        <div class="method-step reveal-text">
+          <span class="method-number">01</span>
+          <div class="method-info">
+            <h3 class="method-title">Briefing Estratégico</h3>
+            <p class="method-desc">Entendemos seu negócio e objetivos antes de gravar qualquer frame.</p>
+          </div>
         </div>
-    </section>
-
-    <section id="pacotes" class="pricing-section bg-darker">
-        <div class="section-header fade-in-up">
-            <h2 class="section-title">Pacotes de Serviços</h2>
-            <p>Agende uma reunião de diagnóstico para conversarmos sobre o pacote ideal e apresentarmos as propostas de valores.</p>
+        <div class="method-step reveal-text">
+          <span class="method-number">02</span>
+          <div class="method-info">
+            <h3 class="method-title">Planejamento</h3>
+            <p class="method-desc">Calendário editorial com temas, formatos e roteiros sob medida.</p>
+          </div>
         </div>
+        <div class="method-step reveal-text">
+          <span class="method-number">03</span>
+          <div class="method-info">
+            <h3 class="method-title">Produção</h3>
+            <p class="method-desc">Gravação com equipamento Cinema Line e edição estratégica.</p>
+          </div>
+        </div>
+        <div class="method-step reveal-text">
+          <span class="method-number">04</span>
+          <div class="method-info">
+            <h3 class="method-title">Distribuição</h3>
+            <p class="method-desc">Publicamos e impulsionamos via Meta Ads pro público certo.</p>
+          </div>
+        </div>
+        <div class="method-step reveal-text">
+          <span class="method-number">05</span>
+          <div class="method-info">
+            <h3 class="method-title">Otimização</h3>
+            <p class="method-desc">Relatórios com métricas e ajustes mensais para maximizar ROI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="pricing-cards">
-            <!-- Padrão (START) -->
-            <div class="card fade-in-up" data-delay="100">
-                <div class="card-header">
-                    <h3>Start</h3>
-                    <p>Para quem está começando a se posicionar digitalmente.</p>
-                </div>
-                <ul class="features">
-                    <li><i class="icon-check"></i> 1 diária de gravação/mês</li>
-                    <li><i class="icon-check"></i> 4 Reels/Shorts editados</li>
-                    <li><i class="icon-check"></i> 4 Roteiros e copies</li>
-                    <li><i class="icon-check"></i> 1 Campanha Meta Ads</li>
-                    <li><i class="icon-check"></i> Equipamento nível Cinema</li>
-                </ul>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20de%20diagn%C3%B3stico%20sobre%20o%20pacote%20Start" target="_blank" class="btn btn-card" onclick="if(typeof fbq === 'function') fbq('track', 'Lead', {content_name: 'Start'});">Agendar Diagnóstico</a>
+  <!-- PORTFÓLIO -->
+  <section class="section portfolio" id="portfolio">
+    <div class="section-inner">
+      <span class="section-label reveal-text">PORTFÓLIO</span>
+      <h2 class="section-title reveal-text">Qualidade de cinema.<br>Resultado de negócio.</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal-text">
+          <div class="portfolio-img">
+            <div class="portfolio-video-wrapper">
+              <iframe src="https://player.vimeo.com/video/1175845243?loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
-
-            <!-- Destaque (IDEAL) -->
-            <div class="card featured fade-in-up" data-delay="200">
-                <div class="popular-badge">Mais Escolhido</div>
-                <div class="card-header">
-                    <h3>Ideal</h3>
-                    <p>Para quem quer crescer com consistência e agressividade.</p>
-                </div>
-                <ul class="features">
-                    <li><i class="icon-check"></i> 2 diárias de gravação/mês</li>
-                    <li><i class="icon-check"></i> 8 curtos + 2 vídeos longos</li>
-                    <li><i class="icon-check"></i> 10 Roteiros e copies</li>
-                    <li><i class="icon-check"></i> 2 Campanhas + Otimização</li>
-                    <li><i class="icon-check"></i> Google Meu Negócio</li>
-                </ul>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20de%20diagn%C3%B3stico%20sobre%20o%20pacote%20Ideal" target="_blank" class="btn btn-primary btn-card" onclick="if(typeof fbq === 'function') fbq('track', 'Lead', {content_name: 'Ideal'});">Agendar Diagnóstico</a>
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Advocacia</span>
+              <h3 class="portfolio-title">Estratégia de Tráfego</h3>
             </div>
-
-            <!-- Premium (PRO) -->
-            <div class="card fade-in-up" data-delay="300">
-                <div class="card-header">
-                    <h3>Pro</h3>
-                    <p>Solução completa para domínio de mercado e máxima performance.</p>
-                </div>
-                <ul class="features">
-                    <li><i class="icon-check"></i> 3 diárias de gravação/mês</li>
-                    <li><i class="icon-check"></i> 12 curtos + 4 vídeos longos</li>
-                    <li><i class="icon-check"></i> Consultoria Estratégica</li>
-                    <li><i class="icon-check"></i> 4 Campanhas + Retargeting</li>
-                    <li><i class="icon-check"></i> Funil de Conversão</li>
-                    <li><i class="icon-check"></i> Criação de Site Institucional</li>
-                </ul>
-                <a href="https://wa.me/5586995065135?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20de%20diagn%C3%B3stico%20sobre%20o%20pacote%20Pro" target="_blank" class="btn btn-card" onclick="if(typeof fbq === 'function') fbq('track', 'Lead', {content_name: 'Pro'});">Agendar Diagnóstico</a>
+          </div>
+        </div>
+        <div class="portfolio-card reveal-text">
+          <div class="portfolio-img">
+            <div class="portfolio-video-wrapper">
+              <iframe src="https://player.vimeo.com/video/1175845319?loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
-        </div>
-    </section>
-
-    <!-- Visão Geral dos Pacotes / Tabela -->
-    <section class="section-container">
-        <div class="section-header fade-in-up">
-            <h2 class="section-title">Visão Geral dos Pacotes</h2>
-            <p>Compare os recursos completos para escolher a melhor opção.</p>
-        </div>
-        
-        <div class="table-container fade-in-up">
-            <table class="compare-table">
-                <thead>
-                    <tr>
-                        <th class="text-left">Serviço</th>
-                        <th>START</th>
-                        <th class="highlight-col">IDEAL</th>
-                        <th>PRO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-group"><td colspan="4">Estratégia & Planejamento</td></tr>
-                    <tr><td class="text-left">Briefing estratégico inicial</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
-                    <tr><td class="text-left">Calendário editorial</td><td>Básico</td><td class="highlight-col">Completo</td><td>Compl. + reuniões</td></tr>
-                    <tr><td class="text-left">Pesquisa de tendências</td><td>—</td><td class="highlight-col">✓</td><td>✓</td></tr>
-                    <tr><td class="text-left">Reunião mensal</td><td>—</td><td class="highlight-col">1x/mês</td><td>2x/mês</td></tr>
-                    <tr><td class="text-left">Consultoria de posicionamento</td><td>—</td><td class="highlight-col">—</td><td>✓</td></tr>
-
-                    <tr class="table-group"><td colspan="4">Roteiros & Copywriting</td></tr>
-                    <tr><td class="text-left">Roteiros curtos (Reels/Shorts)</td><td>4 roteiros</td><td class="highlight-col">8 roteiros</td><td>12 roteiros</td></tr>
-                    <tr><td class="text-left">Roteiros vídeos longos</td><td>—</td><td class="highlight-col">2 roteiros</td><td>4 roteiros</td></tr>
-                    <tr><td class="text-left">Copies para legendas</td><td>4 copies</td><td class="highlight-col">10 copies</td><td>16 copies</td></tr>
-                    <tr><td class="text-left">Teleprompter</td><td>—</td><td class="highlight-col">Opcional</td><td>Incluso</td></tr>
-
-                    <tr class="table-group"><td colspan="4">Produção Audiovisual</td></tr>
-                    <tr><td class="text-left">Diárias de gravação/mês</td><td>1 diária</td><td class="highlight-col">2 diárias</td><td>3 diárias</td></tr>
-                    <tr><td class="text-left">Vídeos curtos</td><td>4 vídeos</td><td class="highlight-col">8 vídeos</td><td>12 vídeos</td></tr>
-                    <tr><td class="text-left">Vídeos longos</td><td>—</td><td class="highlight-col">2 vídeos</td><td>4 vídeos</td></tr>
-                    <tr><td class="text-left">Sony FX30 + Áudio + Luz</td><td>✓</td><td class="highlight-col">✓</td><td>✓</td></tr>
-                    <tr><td class="text-left">Edição & Motion Graphics</td><td>Básico</td><td class="highlight-col">Básico</td><td>Avançado</td></tr>
-
-                    <tr class="table-group"><td colspan="4">Tráfego Pago (Meta Ads)</td></tr>
-                    <tr><td class="text-left">Gestão de Campanhas</td><td>1 campanha</td><td class="highlight-col">2 campanhas</td><td>4 campanhas</td></tr>
-                    <tr><td class="text-left">Criativos em vídeo</td><td>2 criativos</td><td class="highlight-col">4 criativos</td><td>8 criativos</td></tr>
-                    <tr><td class="text-left">Segmentação</td><td>Básica</td><td class="highlight-col">Avançada</td><td>Ava. + Lookalike</td></tr>
-                    <tr><td class="text-left">Retargeting e Funil</td><td>—</td><td class="highlight-col">—</td><td>✓</td></tr>
-                    <tr><td class="text-left">Google Meu Negócio</td><td>—</td><td class="highlight-col">Otim. Básica</td><td>Gestão Completa</td></tr>
-
-                    <tr class="table-group"><td colspan="4">Resultados & Acompanhamento</td></tr>
-                    <tr><td class="text-left">Relatório Mensal</td><td>Simplificado</td><td class="highlight-col">Detalhado</td><td>Detalhado + Reunião</td></tr>
-                    <tr><td class="text-left">Análise ROI & Concorrentes</td><td>—</td><td class="highlight-col">ROI</td><td>ROI + Concorrentes</td></tr>
-                    <tr><td class="text-left">Suporte WhatsApp</td><td>Horário Comercial</td><td class="highlight-col">Estendido</td><td>Prioritário</td></tr>
-                    
-                    <tr class="table-group"><td colspan="4">Desenvolvimento Web</td></tr>
-                    <tr><td class="text-left">Criação de Site Institucional</td><td>—</td><td class="highlight-col">—</td><td>Incluso</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- Info e Próximos Passos -->
-    <section id="informacoes" class="section-container bg-darker">
-        <div class="split-layout fade-in-up" style="align-items: flex-start;">
-            <div class="split-text">
-                <h2 class="section-title">Informações Importantes</h2>
-                <div class="accordion">
-                    <div class="acc-item">
-                        <h4>Investimento em Mídia (Tráfego)</h4>
-                        <p>Nosso trabalho compreende a gestão e produção audiovisual. O investimento em mídia (Meta Ads/Google) é pago diretamente à plataforma, com valores definidos em conjunto durante nosso planejamento.</p>
-                    </div>
-                    <div class="acc-item">
-                        <h4>Vigência e Fidelidade</h4>
-                        <p>Contrato mínimo de 3 meses. O posicionamento digital é um trabalho de médio prazo e os resultados se consolidam com consistência.</p>
-                    </div>
-                    <div class="acc-item">
-                        <h4>Equipamento de Cinema</h4>
-                        <p>Todas as gravações utilizam a Sony FX30 (linha cinema), iluminação LED profissional e captação de áudio limpa. Garantimos a mais alta qualidade visual e sonora do mercado.</p>
-                    </div>
-                    <div class="acc-item">
-                        <h4>Forma de Pagamento</h4>
-                        <p>Mensal via PIX, transferência ou boleto com vencimento todo dia 5 do mês vigente.</p>
-                    </div>
-                </div>
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Medicina</span>
+              <h3 class="portfolio-title">Autoridade Médica</h3>
             </div>
-            <div class="split-text" style="background: var(--card-bg); padding: 3rem; border-radius: 24px; border: 1px solid var(--card-border);">
-                <h2 class="section-title" style="margin-bottom: 2rem;">Próximos Passos</h2>
-                <ol class="next-steps-list">
-                    <li>Escolha o pacote que melhor se alinha com seus objetivos.</li>
-                    <li>Entre em contato para agendar uma reunião de diagnóstico.</li>
-                    <li>Apresentaremos nossa proposta de valores e começaremos a transformar seu posicionamento.</li>
-                </ol>
-                <div style="margin-top: 3rem;">
-                    <p style="margin-bottom:1rem; font-weight:600;">Vamos conversar?</p>
-                    <a href="https://wa.me/5586995065135" target="_blank" class="btn btn-primary" style="width: 100%;" onclick="if(typeof fbq === 'function') fbq('track', 'Contact');">Falar com Dário Douglas</a>
-                </div>
+          </div>
+        </div>
+        <div class="portfolio-card reveal-text">
+          <div class="portfolio-img">
+            <div class="portfolio-video-wrapper">
+              <iframe src="https://player.vimeo.com/video/1175845272?loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
-        </div>
-    </section>
-
-    <footer id="contato">
-        <div class="footer-content fade-in-up">
-            <div class="footer-logo">Grace<span>Films</span></div>
-            <p>Construindo o futuro audiovisual da sua marca.</p>
-            <div class="socials">
-                <a href="https://www.instagram.com/gracefilms.mov/" target="_blank">@gracefilms.mov</a>
-                <a href="https://www.instagram.com/eudariodouglas/" target="_blank">@eudariodouglas</a>
-                <a href="https://wa.me/5586995065135" target="_blank">WhatsApp</a>
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Saúde & Estética</span>
+              <h3 class="portfolio-title">Presença Digital</h3>
             </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Grace Films. Todos os direitos reservados. Marketing & Posicionamento Audiovisual.</p>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- CTA FINAL -->
+  <section class="section cta-section" id="contato">
+    <div class="cta-bg-logo">
+      <img src="LOGO.png" alt="" class="cta-bg-img">
+    </div>
+    <div class="cta-radial"></div>
+    <div class="section-inner cta-content">
+      <h2 class="cta-title reveal-text">Vamos conversar<br>sobre o seu projeto?</h2>
+      <p class="cta-subtitle reveal-text">Cada marca tem uma necessidade única. Agende uma reunião de diagnóstico e receba uma proposta personalizada para o seu negócio.</p>
+      <a href="https://wa.me/5586995065135?text=Olá%2C%20gostaria%20de%20agendar%20uma%20reunião%20com%20a%20Grace%20Films!" target="_blank" rel="noopener" class="cta-button reveal-text">Agendar Reunião com Dário Douglas</a>
+      <p class="cta-note reveal-text">Diagnóstico gratuito ✦ Sem compromisso</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img src="LOGO.png" alt="Grace Films" class="footer-logo-img">
+            <span class="footer-films">FILMS</span>
+          </div>
+          <p class="footer-tagline">Produtora Audiovisual Estratégica</p>
+        </div>
+        <div class="footer-nav">
+          <a href="#sobre">Sobre</a>
+          <a href="#metodo">Método</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://instagram.com/gracefilms.mov" target="_blank" rel="noopener">@gracefilms.mov</a>
+          <a href="https://instagram.com/eudariodouglas" target="_blank" rel="noopener">@eudariodouglas</a>
+          <a href="https://wa.me/5586995065135?text=Olá%2C%20gostaria%20de%20agendar%20uma%20reunião%20com%20a%20Grace%20Films!" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Grace Films®. Todos os direitos reservados.</p>
+        <p>Teresina, PI ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
